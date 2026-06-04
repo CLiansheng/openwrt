@@ -1,0 +1,6 @@
+﻿# Temporary/local build clutter
+sdk/
+*.tar
+*.tar.zst
+build/netpulse_server
+build/netpulse-openwrt-upload/
