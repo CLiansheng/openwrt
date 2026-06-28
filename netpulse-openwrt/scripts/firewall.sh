@@ -107,8 +107,8 @@ cmd_add() {
     id="$(date +%s)"
     match="$(append_match "$proto" "$src" "$dst" "$port")"
 
-    nft add rule "$FAMILY" "$TABLE" input $match counter "$action" comment "netpulse:$id"
-    nft add rule "$FAMILY" "$TABLE" forward $match counter "$action" comment "netpulse:$id"
+    nft add rule "$FAMILY" "$TABLE" input $match counter "$action" comment \"netpulse:$id\"
+    nft add rule "$FAMILY" "$TABLE" forward $match counter "$action" comment \"netpulse:$id\"
 
     echo "added rule id: $id"
     echo "protocol=$proto src=$src dst=$dst port=$port action=$action"
